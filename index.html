@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: linear-gradient(rebeccapurple, violet);
+        }
+        #container{
+            background-image: linear-gradient(rgba(102, 51, 153, 0.466), rgba(238, 130, 238, 0.479));
+            border: 1px solid ;
+            height: 48%;
+            width: 23%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #display{
+            width: 270px;
+            height: 35px;
+            font-size: large;
+            background-color: rgba(254, 4, 254, 0.943);
+            border: none;
+        }
+        .a{
+            height: 30px;
+            width: 65px;
+            position: relative;
+            left: 0px;
+            background-color: rgba(0, 0, 0, 0.792);
+            color: rgba(254, 4, 254, 0.943);
+            font-weight: bolder;
+            font-size: larger;
+            box-shadow: 1px 1px 0px black;
+        }
+        #clear{
+            height: 30px;
+            width: 125px;
+            position: relative;
+            left: 5px;
+            background-color: black;
+            color: rgba(254, 4, 254, 0.943);
+            font-weight: bolder;
+            font-size: larger;
+        }
+        #output{
+            height: 30px;
+            width: 125px;
+            position: relative;
+            left: 15px;
+            font-weight: bolder;
+            font-size: larger;
+            background-color: black;
+            color: rgba(254, 4, 254, 0.943);
+        }
+        .a:hover{
+            background-color: rgba(254, 4, 254, 0.943);
+            color: black;
+        }
+        #clear:hover{
+            background-color: rgba(254, 4, 254, 0.943);
+            color: black;
+        }
+        #output:hover{
+            background-color: rgba(254, 4, 254, 0.943);
+            color: black;
+        }
+        #a{
+            font-size: 100px;
+            position: absolute;
+            left: 370px;
+            color: rgba(240, 248, 255, 0.495);
+        }
+        #b{
+            font-size: 100px;
+            position: absolute;
+            left: 570px;
+            color: rgba(240, 248, 255, 0.822);
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <form name="calc">
+            <input id="display" name="answer">
+            <br><br>
+            <input type="button" value="1" class="a" onclick="calc.answer.value+='1'">
+            <input type="button" value="2" class="a" onclick="calc.answer.value+='2'">
+            <input type="button" value="3" class="a" onclick="calc.answer.value+='3'">
+            <input type="button" value="+" class="a" onclick="calc.answer.value+='+'">
+            <br><br>
+            <input type="button" value="4" class="a" onclick="calc.answer.value+='4'">
+            <input type="button" value="5" class="a" onclick="calc.answer.value+='5'">
+            <input type="button" value="6" class="a" onclick="calc.answer.value+='6'">
+            <input type="button" value="-" class="a" onclick="calc.answer.value+='-'">
+            <br><br>
+            <input type="button" value="7" class="a" onclick="calc.answer.value+='7'">
+            <input type="button" value="8" class="a" onclick="calc.answer.value+='8'">
+            <input type="button" value="9" class="a" onclick="calc.answer.value+='9'">
+            <input type="button" value="*" class="a" onclick="calc.answer.value+='*'">
+            <br><br>
+            <input type="button" value="/" class="a" onclick="calc.answer.value+='/'">
+            <input type="button" value="0" class="a" onclick="calc.answer.value+='0'">
+            <input type="button" value="." class="a" onclick="calc.answer.value+='.'">
+            <input type="button" value="%" class="a" onclick="calc.answer.value+='%'">
+            <br><br>
+            <input type="button" id="clear" value="Clear" onclick="calc.answer.value=' '">
+            <input type="button" id="output" value="=" onclick="calc.answer.value=eval(calc.answer.value)">
+        </form>
+    </div>
+    <h1 id="a">Calc</h1>
+    <br>
+    <h1 id="b">ulator</h1>
+</body>
+</html>
